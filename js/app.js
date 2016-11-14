@@ -20,7 +20,10 @@ document.createElement creates an Element node
 element.id sets or returns the identifier of an element
 element.innerHTML sets or returns the HTML element content of an element
 node.appendChild() is a method that appends a node as the last child of a node*/
-
+var catBox = document.createElement('div');
+catBox.id = "MEOW";
+catBox.innerHTML = "Overcome its fear of cucumbers!";
+bigBox.appendChild(catBox);
 
 //Exercise 2
 /*Declare a variable named catBox2 and create an element of your choice.  Give your element an id of "purr".  Next assign your element with the following text:
@@ -28,7 +31,10 @@ node.appendChild() is a method that appends a node as the last child of a node*/
 
 Append this newly created element to the bigBox element.*/
 
-
+var catBox2 = document.createElement('p');
+catBox.id = "purr";
+catBox.innerHTML = "Audition for the next musical.";
+bigBox.appendChild(catBox2);
 
 //Exercise 3
 /*Your objective is to display the following getBuckets array into the document. 
@@ -41,8 +47,14 @@ Append the "li" elements inside the "buckets" div that have been already created
 element.className is a property that sets or returns the class name of an element*/
 
 var getBuckets = ["Become more famous than that overrated fraud Garfield", "Visit Aoshima (aka Japan's Cat Island)", "Exhaust my entire 9 lives", "Pass DevLeague's coding challenge", "Become the next internet sensation", "eat tacos", "Buy Vic a bottle of Hendricks Gin" ];
+for (var i=0; i<getBuckets.length; i++){
+	console.log(getBuckets[i]);
 
-
+	var bucketList = document.createElement('li');
+	bucketList.className = "daList";
+	bucketList.innerHTML = getBuckets[i];
+	bucketList.appendChild(bucketList);
+}
 
 //Exerise 4
 /*Our motivated Tacocat has been hard at work on its bucket list.  Update the current list to the following:
@@ -52,7 +64,8 @@ var getBuckets = ["Become more famous than that overrated fraud Garfield", "Visi
 Declare a variable named changeList and assign it to the getElementsByTagName method.
 */
 
-
+var changeList = document.getElementsByTagName('li');
+changeList[0].innerHTML = "I'm coming for you Felix!";
 
 
 
@@ -61,7 +74,8 @@ Declare a variable named changeList and assign it to the getElementsByTagName me
 
 "Exhaust my entire 9 lives" => "I got 1 life to live!"*/
 
-
+var changeListAgain = document.getElementsByClassName('daList');
+changeListAgain[2].innerHTML = "I got 1 life to live!";
 };
 
 
